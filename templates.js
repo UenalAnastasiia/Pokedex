@@ -15,7 +15,7 @@ function generatePokemonInfoHTML(i) {
                 <h2>${currentPokemon['types'][0]['type']['name']}</h2>
             </div>
             <div class="pokemon-type-id">
-                <h2>#${currentPokemon['id']}</h2>
+                <h2 id="pokemonId${i}">#${currentPokemon['id']}</h2>
             </div>
         </div>
     </div>

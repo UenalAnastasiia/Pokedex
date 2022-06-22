@@ -72,7 +72,7 @@ function chooseBoxInOpenCard() {
 
 
 /**
- * Search Pokemon
+ * Search Pokemon (Name or ID)
  */
 function searchPokemon() {
     const search = document.getElementById("search").value;
@@ -80,8 +80,9 @@ function searchPokemon() {
     for (let i = 1; i < pokemonLimit; i++) {
         let pokemonCard = document.getElementById(`pokemonCard${i}`);
         let pokemonName = document.getElementById(`pokemonName${i}`).innerHTML;
+        let pokemonId = document.getElementById(`pokemonId${i}`).innerHTML;
 
-        if (!pokemonName.includes(search)) {
+        if (!pokemonName.includes(search) && !pokemonId.includes(search)) {
             pokemonCard.classList.add('d-none');
         }
         else {
