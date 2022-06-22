@@ -7,18 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js"></script>
+    <script src="templates.js"></script>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body onload="renderPokedex()">
     <div id="main">
         <header>
             <div class="main-header">
-                <h1>Pokedex</h1>
-                <div class="search-box">
-                    <input placeholder="Search by Name or ID" type="text">
-                    <img src="img/search.svg">
+                <div class="pokeball">
+                    <img src="img/pokeball.png">
+                    <h1>Pokedex</h1>
                 </div>
+                <div class="search-box">
+                    <input type="text" id="search" onkeyup="searchPokemon()" aria-label="Search" autocomplete="off"
+                        placeholder="Search by Name or ID">
+                </div>
+
+                <div class="filter-box">
+                    <a href="#" class="btn active" data-filter="all">All</a>
+                    <a href="#" class="btn" data-filter="fire">Fire</a>
+                    <a href="#" class="btn" data-filter="grass">Grass</a>
+                    <a href="#" class="btn" data-filter="water">Water</a>
+                    <a href="#" class="btn" data-filter="bug">Bug</a>
+                </div>
+
             </div>
         </header>
         <div id="pokedex"> </div>
