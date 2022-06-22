@@ -75,7 +75,7 @@ function chooseBoxInOpenCard() {
  * Search Pokemon (Name or ID)
  */
 function searchPokemon() {
-    const search = document.getElementById("search").value;
+    const search = document.getElementById("search").value.toLowerCase();
 
     for (let i = 1; i < pokemonLimit; i++) {
         let pokemonCard = document.getElementById(`pokemonCard${i}`);
